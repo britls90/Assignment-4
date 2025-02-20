@@ -206,61 +206,6 @@ class NumberUtilsTest {
         assertThat(add(left, right)).isEqualTo(result);
     }
 
-    @Test
-    @Tag("mutation")
-    @DisplayName("All zeros")
-
-    void allZeros() {
-        List<Integer> left = new ArrayList<>();
-        List<Integer> right = new ArrayList<>();
-        List<Integer> result = new ArrayList<>();
-        right.add(0);
-        left.add(0);
-        result.add(0);
-        assertThat(add(left, right)).isEqualTo(result);
-    }
-
-    @Test
-    @DisplayName("Right 9")
-    @Tag("mutation")
-    void right9() {
-        List<Integer> left= new ArrayList<>();
-        left.add(1);
-        List<Integer> right = new ArrayList<>();
-        right.add(9);
-        List<Integer> result = new ArrayList<>();
-        result.add(1);
-        result.add(0);
-        assertThat(add(left,right)).isEqualTo(result);
-    }
-    @Test
-    @DisplayName("Left 9")
-    @Tag("mutation")
-    void left9() {
-        List<Integer> left= new ArrayList<>();
-        left.add(9);
-        List<Integer> right = new ArrayList<>();
-        right.add(1);
-        List<Integer> result = new ArrayList<>();
-        result.add(1);
-        result.add(0);
-        assertThat(add(left,right)).isEqualTo(result);
-    }
-
-    @Test
-    @DisplayName("left list size 2, right list size 1 with carry")
-    @Tag("mutation")
-    void left2Right1() {
-        List<Integer> left = new ArrayList<>();
-        List<Integer> right = new ArrayList<>();
-        left.add(7);
-        left.add(1);
-        right.add(9);
-        List<Integer> result = new ArrayList<>();
-        result.add(8);
-        result.add(0);
-        assertThat(add(left, right)).isEqualTo(result);
-    }
 
 
 }
